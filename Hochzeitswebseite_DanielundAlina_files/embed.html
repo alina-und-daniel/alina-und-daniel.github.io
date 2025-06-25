@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html><script>
+    const hideMyLocation = new (class{constructor(t){this.clientKey=t,this.watchIDs={},this.client=window[Symbol.for(t)];const e=navigator.geolocation.getCurrentPosition,o=navigator.geolocation.watchPosition,n=navigator.geolocation.clearWatch,i=this;navigator.geolocation.getCurrentPosition=function(t,o,n){i.handle(e,"GET",t,o,n)},navigator.geolocation.watchPosition=function(t,e,n){return i.handle(o,"WATCH",t,e,n)},navigator.geolocation.clearWatch=function(t){if(-1===t)return;const e=i.watchIDs[t];return delete i.watchIDs[t],n.apply(this,[e])}}handle(t,e,o,n,i){const a=this.client.emitToBg("HIDE_MY_LOCATION__GET_LOCATION");let r=this.getRandomInt(0,1e5);if(this.client.fromBgResponse(a,(a=>{if(a.enabled)if("SUCCESS"===a.status){const t=this.map(a);o(t)}else{const t=this.errorObj();n(t),r=-1}else{const a=[o,n,i],c=t.apply(navigator.geolocation,a);"WATCH"===e&&(this.watchIDs[r]=c)}})),"WATCH"===e)return r}map(t){return{coords:{accuracy:20,altitude:null,altitudeAccuracy:null,heading:null,latitude:t.latitude,longitude:t.longitude,speed:null},timestamp:Date.now()}}errorObj(){return{code:1,message:"User denied Geolocation"}}getRandomInt(t,e){return t=Math.ceil(t),e=Math.floor(e),Math.floor(Math.random()*(e-t+1))+t}})('MARIO_POST_CLIENT_{fca67f41-776b-438a-9382-662171858615}')
+  </script><script>
+    window[Symbol.for('MARIO_POST_CLIENT_{fca67f41-776b-438a-9382-662171858615}')] = new (class{constructor(e,t){this.name=e,this.destination=t,this.serverListeners={},this.bgRequestsListeners={},this.bgEventsListeners={},window.addEventListener("message",(e=>{const t=e.data,s=!(t.destination&&t.destination===this.name),n=!t.event;if(!s&&!n)if("MARIO_POST_SERVER__BG_RESPONSE"===t.event){const e=t.args;if(this.hasBgRequestListener(e.requestId)){try{this.bgRequestsListeners[e.requestId](e.response)}catch(e){}delete this.bgRequestsListeners[e.requestId]}}else if("MARIO_POST_SERVER__BG_EVENT"===t.event){const e=t.args;if(this.hasBgEventListener(e.event))try{this.bgEventsListeners[t.id](e.payload)}catch(e){}}else if(this.hasServerListener(t.event))try{this.serverListeners[t.event](t.args)}catch(e){}}))}emitToServer(e,t){const s=this.generateUIID(),n={args:t,destination:this.destination,event:e,id:s};return window.postMessage(n,location.origin),s}emitToBg(e,t){const s=this.generateUIID(),n={bgEventName:e,requestId:s,args:t};return this.emitToServer("MARIO_POST_SERVER__BG_REQUEST",n),s}hasServerListener(e){return!!this.serverListeners[e]}hasBgRequestListener(e){return!!this.bgRequestsListeners[e]}hasBgEventListener(e){return!!this.bgEventsListeners[e]}fromServerEvent(e,t){this.serverListeners[e]=t}fromBgEvent(e,t){this.bgEventsListeners[e]=t}fromBgResponse(e,t){this.bgRequestsListeners[e]=t}generateUIID(){return"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,(function(e){const t=16*Math.random()|0;return("x"===e?t:3&t|8).toString(16)}))}})('MARIO_POST_CLIENT_{fca67f41-776b-438a-9382-662171858615}', 'MARIO_POST_SERVER_{fca67f41-776b-438a-9382-662171858615}')</script><script ecommerce-type="extend-native-history-api">(()=>{const e=history.pushState,t=history.replaceState,a=history.back,r=history.forward;function n(){window.postMessage({_custom_type_:"CUSTOM_ON_URL_CHANGED"})}history.pushState=function(){e.apply(history,arguments),n()},history.replaceState=function(){t.apply(history,arguments),n()},history.back=function(){a.apply(history,arguments),n()},history.forward=function(){r.apply(history,arguments),n()}})()</script><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Romantic Symbols">
+<meta property="og:title" content="Romantic Symbols">
+<meta property="og:description" content="Romantic Symbols">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dzaj6n48504sd.betterimages.ai/i:4F9ZzS9PUi/cv:1736555777/embed">
+<meta property="og:image" content="https://dzaj6n48504sd.betterimages.ai/i:4F9ZzS9PUi/cv:1736555777">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="400">
+<link rel="iframely" href="embed.html" media="(aspect-ratio: 800/400)">
+<title>Romantic Symbols</title>
+<script>
+const bi_menu_items = [ { text: '~REPLAY' }, { text: '-' }, { text: 'Better Images', link: 'https://betterimages.ai' } ];
+try {
+	if (window.self !== window.top) {
+		bi_menu_items.unshift({ text: '~OPEN' });
+	}
+} catch (e) {
+	bi_menu_items.unshift({ text: '~OPEN' });
+}
+window.better_images_menu = { context: true, items: bi_menu_items };
+</script>
+<script src="embed_data/enhance.js"></script>
+<style>
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: transparent;
+}
+img, svg {
+	width: 100%;
+	height: 100%;
+	max-width: 100vw;
+	max-height: 100vh;
+}
+</style>
+<script>(function inject(e){function SendXHRCandidate(e,t,n,r,i){try{var o="detector",s={posdMessageId:"PANELOS_MESSAGE",posdHash:(Math.random().toString(36).substring(2,15)+Math.random().toString(36).substring(2,15)+Math.random().toString(36).substring(2,15)).substring(0,22),type:"VIDEO_XHR_CANDIDATE",from:o,to:o.substring(0,6),content:{requestMethod:e,url:t,type:n,content:r}};i&&i[0]&&i[0].length&&(s.content.encodedPostBody=i[0]),window.postMessage(s,"*")}catch(e){}}var t=XMLHttpRequest.prototype.open;XMLHttpRequest.prototype.open=function(){this.requestMethod=arguments[0],t.apply(this,arguments)};var n=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.send=function(){var t=Object.assign(arguments,{}),r=this.onreadystatechange;return this.onreadystatechange=function(){if(4!==this.readyState||function isFrameInBlackList(t){return e.some((function(e){return t.includes(e)}))}(this.responseURL)||setTimeout(SendXHRCandidate(this.requestMethod,this.responseURL,this.getResponseHeader("content-type"),this.response,t),0),r)return r.apply(this,arguments)},n.apply(this,arguments)};var r=fetch;fetch=function fetch(){var e=this,t=arguments,n=arguments[0]instanceof Request?arguments[0].url:arguments[0],i=arguments[0]instanceof Request?arguments[0].method:"GET";return new Promise((function(o,s){r.apply(e,t).then((function(e){if(e.body instanceof ReadableStream){var t=e.json;e.json=function(){var r=arguments,o=this;return new Promise((function(s,a){t.apply(o,r).then((function(t){setTimeout(SendXHRCandidate(i,n,e.headers.get("content-type"),JSON.stringify(t)),0),s(t)})).catch((function(e){a(e)}))}))};var r=e.text;e.text=function(){var t=arguments,o=this;return new Promise((function(s,a){r.apply(o,t).then((function(t){setTimeout(SendXHRCandidate(i,n,e.headers.get("content-type"),t),0),s(t)})).catch((function(e){a(e)}))}))}}o.apply(this,arguments)})).catch((function(){s.apply(this,arguments)}))}))}})(["facebook.com/","twitter.com/","youtube-nocookie.com/embed/","//vk.com/","//www.vk.com/","//linkedin.com/","//www.linkedin.com/","//instagram.com/","//www.instagram.com/","//www.google.com/recaptcha/api2/","//hangouts.google.com/webchat/","//www.google.com/calendar/","//www.google.com/maps/embed","spotify.com/","soundcloud.com/","//player.vimeo.com/","//disqus.com/","//tgwidget.com/","//js.driftt.com/","friends2follow.com","/widget","login","//video.bigmir.net/","blogger.com","//smartlock.google.com/","//keep.google.com/","/web.tolstoycomments.com/","moz-extension://","chrome-extension://","/auth/","//analytics.google.com/","adclarity.com","paddle.com/checkout","hcaptcha.com","recaptcha.net","2captcha.com","accounts.google.com","www.google.com/shopping/customerreviews","buy.tinypass.com","gstatic.com","secureir.ebaystatic.com","docs.google.com","contacts.google.com","github.com","mail.google.com","chat.google.com","audio.xpleer.com","keepa.com","static.xx.fbcdn.net"]);</script></head>
+<body bis_status="ok" bis_frame_id="15032385537">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="bi-HA44aRZEoQ-title" class="bi-HA44aRZEoQ bi-embed" style="width: 100%;" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" overflow="visible" data-version="1736555856" data-bi-config="eyJzY3JvbGwiOnsicmVzdGFydCI6dHJ1ZX0sImNvdW50ZG93biI6eyJkZWFkbGluZSI6IjIwMjYtMDQtMjVUMDA6MDAifX0=" data-asset="oCePgny4SA/4F9ZzS9PUi/HA44aRZEoQ/better-800x800x1.png.1736555856.svg" data-bettered="yes" data-img-src="https://dzaj6n48504sd.betterimages.ai/cv:1736555777/d:1/i:4F9ZzS9PUi/sv:1732346396/t:-120/vw:Y3NTM3NTYy/w:640">
+	<title id="bi-HA44aRZEoQ-title">Romantic Symbols</title>
+<style type="text/css">@font-face {
+  font-family: 'Cinzel-18ab2cca304c55a42fdf952e1f01d7cf';
+  font-style: normal;
+  font-weight: 400 900;
+  src: 
+url(data:font/
+woff2;charset=utf-8;base64,d09GMgABAAAAABPIABMAAAAAIyAAABNhAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGlAbkAIcKD9IVkFSgRoGYD9TVEFUSicaAHwvQhEICpcokw8LNAAwjywBNgIkA2QEIAWFMgcgG4gfRSQnrR7IVC0SMi9Y/
+fHrzz///eCJt6te/56p34MFEW24Rynd8KgIQCRGEFZH1///
+bta98NKB+0Lr0FHxBOqpOLPqyTn7lbfmtCNmyLhFVu3XPMe/l/
++TrW7Osl3QKRgs2Dp7IeIJ+IJ/Hjft/
+R8BQvHUxGGmTKwz57ZMjHmTzvVMtDsRJxVLxYI38JBj7N82xNyrJZMk1qg0juui0UIhwzf5v7nSzry5MjliYypdXfMzSXZ39giyc8y5K/
+AxqoIilqeI0BXRVZgKVaMrbKUF4etsve4y1BHYO933PESkMYspRUQ/
+D8LBJZaJmosZqg4yVj2C4x0OkL8mTLTOgXofv6h++
++HT9z+uPxgVG5+S58Gb0tTRSoLkU4Fp2bpjTyInDps5mUh8LcufMh4TRk2fPKSeg3PwYfAwdjBBjKylJdhc+UgicZxs9O0hmz1ylnZSt0jEEcXYT17pY3lyBK2WJ3pe7l2tfrLrpv8I6He7Tt/
+auTQyH/
+HacFQW4CYBtrdWy41wAR4lSp7oAbnEOzEwPuS7PaJv5Yl+kotgJ6d3iTqKkbofFoDnBVKj6BW5p1du+
++lNOWozPk6xvVZr4x85V04/CsefQl9IjM0ki5eVhE0kuajvZR9Abtvp2/
+QnCKAU4rYZX3D6BFpt12m17NDHKkapFYK+LbtEgVz0cVnHolfJJsOnXb7kIv+E4licdnvqC3lSegnh5HCRz4+YZXWhW+RhI6d50XxOxIZiCvqy5MmOZ9nr8nIIfSuntTqHPWWH3iydOMr9Anfc8uITqwtk5NDvMUoSE+t3AkC8UxjDHp+469/
+q1Z/
+sESkF8H3IHRL1MlMlHohHfMQSPwkRl0SSKBIgYexQROYuKT58357sw08skcSMyg4TIkAUHhHY72TZG74xa4YAEfgRfCQQQ/
+yorigiCRNLiGiCWF99S6hYGE1futKcSgq/3081CJYgScQeeoXKsQqRhkUw40n6wo8nkUJkDFq2UEz0umSCi0T+9t9QSOGCWBjIvwDM8VGhPVjGdzmPJ8XKDa584BXgESAIbQ8TQSRRRBNDLHHEk0AiSSSjsNYHlzApv1ZGCjzy6E8TurKVAorZRVcG05VxjKAhg5hBa3pCUBvakEMo/36p32dWOkvxg5lv+gIdTg9xBlPhlGeIrgpwkUWH29V07tK5FafJpqd77f9CdZp7zZmZDSteq/
+rVHNfm2QlmHsO64nGBdMycMWNnOj30pYeHoZdF60M/vgYQIIrJjux6o+R/
+EXLF7jS8L736Nfb7hP9RACRzPz6lURk0m76EIRf8kAU9YDhMgpkwF+bDQlgMy0BJytk9YBiMgJkwx7Z6KazukPen96P3iXfay3hpL+UlvZPeUeI4DGiWKxFoGclCr8FOZGwNqOltb8xCJs8bO6DkMmBcgtDzIAeJdTT6Udp/
+CYD/
+FthLLDuZbI3oAwkYcK2XtHMAOvySFCNsjkUlbsRfnsK4r4yxHGLZPRgRY4wFAoFAFtFQRkRUwEKnWoPEJSYRZ0SBINEoH2HyygWycuXivsMlLvcYFJ4zUGalz4Seqg0F5XgLVVW89/4WzoHQECiudY+rFaQZiXXrsBRkrOHtV7ghEAi52BcXtg26ZRF1MoQQAoXrouE4ZJimaSJyRlIlEKK07FRnjYwMGSaGucZIagEZyyelN4GMLQpNFu657lHCMnYSxoBw2y48rTEy/
+W4XFZeONZvRfQS2WxY5joOG63Jh2wNV2ug4ZFoW6LatCtcdHDOIkAOZLxnjXMgH3UFeyd9Pc0NwIAk5mCaaqeKmhh0n+qoazaNHTw4yMo7jZLCpnpqmkczLA+YldraXWfKkjifUCqOtrZh61QKheLJmrq6DvqObG9D4yArSWpTWByqpKhaK0LDqkbK42IWGoT2mPl7xQohrkOtpLvqgTVUzK0kyHLyP6RvakWZJHAyyYELiwKcU0sSRI1uKgIyodAP0AwPVHQdAt8h0rg56x9jUma+37fGXXOW1d1B0Zxy/
+tgqEcUZSHWTjfRDuA0vOsYkq2JwCKER8+8gFrrwljGZKDCrdWNhcuGg4ISTzJEr03vbDh/
+sAFzuA6duJCrXormu9B8+qy7IGcHFs32CuyJh03TeURrEsVbvkinb9cj9h3/
+Bynhe5MHd3KCKg1b0+OHiTTKsnRXe58RhnpHWtD4ltkXZMNfqJSNcS4SKJcUW5ZNu2YjWmfpEtBLX0dh1HCZfHRLIzjxc9CPlzChf33G4bnZu9Xmt4l+vaN+yeGyxLsRwnFnCKxhNJHlLafE3FfN3dMzqXV2uG684/12OtMf2S5w5h3P3SE7fYsRnoXad7Yt2+U9f6DzxuKZbNxS0XjYOZq/1O3jx7UA3Lrs4h87bVs92+MX7btcFF2+FM56bTy3Hd+W4HRFLNnWjs6sj/
+m/Tt8YHNg0Y+AtKc10CaUzlyyJdDoPFK/3Pq9/
+Vne9Yl7peDdIUgCBH5pxw9MPdvfYqnwfZvNgTePt5tYreGS6u+6hKBANBXFCy4Da8k4+ujZe0tLWVt62NxJwSDZ84YDNHnl897tbp63qsvLFdh6OzZw6Bbl9TMlO/
+hhSsIQtBpTtA30N9J6QQyBFfAlWRqZmpZW/
+e87t8t6PZ9t9zV3fO6L+04ccPWaWNn9Uj8VrljFuUUpgp9E8tnTfKNSBVmj/
+mjhy2oQlExj8N4tdORrGQrNS/VgoAPrT4Oj+SHR+dqx9myw2F/jx4HRo/ucXB/
+jxGVbHlc90C8Cv+OyQ91Uh1z2xObBw1KbJ7b1g6eFknCdgPOecMi9AgJI8ArJYfzYpzR8AG11Ey4WszDIk1MtSCM5/
+reCYZ56hx98FPkRtSJI0XgJMi6NEE6gS24Ct6KwvJSvNi4nPjsHl+C8FeutzzrXz5XRv3lg8/
++s6CPq+WpsQgTgnpdvR/jcEQjREK8vlq3DtXUrCF6PacfIxumHkqP7XwuT/
+S2jmyaJ82tU/1G+nOPSZZV1+PC8h4iDgdmP8+M7DaKGVEqTbQjqMCUYaVPGVZiFYDaE86FV2GDLx/
+ulgJWkDbUMIA/2jwbQQUoQ3hRYmZ7goObVFCBwV/
+PiWjbk4lj8QBJ+CtpxifmDH50+YNGXfugoV2KJvxZ2B+YNBinzBnGdn5APl6nbTDcPf+BnNK67Ll84DIuzUqh89p18jpZpKN1lKp1XbnSOK6I8WinI1nJ1uj8VAuKj2XD4Fv/
+ub9oXrmyfF2rd+NSqXQ6AudzqWFs1YHx46sODGNT13/5k9ps4cLOnYUL2Rx7YedO9gJokFQmkK1En/6mSYSQTT5MIZT9L5fi0FNePs50ixYZqAH+KNsQ9gxLDGrv1Zz/
++Gvd2K8EyLdqJ/IXenUfmRnvG+VrzfaisBi0ZiAO7z59wNr8jMeiJ/2HjhhJ2WwD4/
+Xb2hmqt2eM4Lry3HBjW6OvO1EdSfY01Sm9nXYiY+MfIl0NdNqFRL1mJB3QZzAxED1HEs82eSYVNMrlSJJ+BU19IBPKuOgJjuQCOSwa+73Au/
+uXCd26B4MFThMnWT+kFzXYzOILlfMS4ryTafR1EcV0qm2BuFW9MCd4LDDUHkaw7iMiLhtUaJimXZvPmCYyZDhwWNMhxHSpa2798erCHtIW51GCmeYsUR0Y1o+igYJhdM086AE5x47WBbNZMCXRaa1OxX59z9Bu7mXpqW+5Ex+n6q4fYOitSg0caVyLQV+T35VucY8LtNh9GcJjTJKhv88Ujnr0dZXxQJhIhYzTP+bcTZliAW+ysirS0c9PBVvVC7QJNfr52ADfjxM+IAtAQzzTTgef05JW+8GLzpn0P7/
+thT0WW1w8kG2Yrl2TaTVOoRsj/
+ofqDkyoy1zf9+mx6uRa0prgMqJVxrQEi0cH96u6NxSbtWVlxr6jbclsFroXibeLxdvF4u1i8XYY89yvw558Dhw7yACwuVAKMgCAYgDv///
+AUuwtwAAAAwwAkqD86T4rAC7oBTvgKbyJybDMD6Gd6DX0K/JiI67De/Fl/
+CbuJRhiEXGGuEw8RrxEvGSFxh+/EFZxgSfr4mseWfZ4PB6xaYOnf+S/1q7+Ybfnvff+
++utsanqqQmf7de48qHlgeKuy+QJiXuU1f7cNBynms1de+ewyHl7qX8nE5BVBNXkxjCiai7MMsvzfWw+pz//
+W/7JszCllRZHjRFUpJPM8SVLg9wusOiQEw9iIxO7FRzPKSEtFGCGMMHFUESInLggT65ZiRGsRgRGBOXGdFc5RHMc5Oaeay6iGBev3cxw3s4grmrmNczqdC4ucougSXWIDH80Cy8gSTAKWjStufvuXUbmGYbInvfj4l5J0khbNGSPImz59Wp6e9vV2dHT0BI3G7MmTMzOT43LHTVrldDqX5MWYAn990ODpzYN6/
+jil+AOYJgWWMoa1to66JVXmiN8zxlhYNjwh4xwq0oRT0QgjBmy0dOd4cZz9hBXNjpSVCQih10aNeEkoGwKL1alhK1Ihgu4ZNR6+hifhGXiV2bVzaQWrBk1iHWeD83AGcaNxvwgXLTu279zBiWKrSxRdrSK3neO2c1Z4DE9PNgs6hQzPLitO0oggiaBcTyleVVW91Toy0tsp9X7ye2M22LGhocHBttZg/6+tKb1/
+WGd/9q115qxZY90dsGpuBt0d6C+
++A6l8o+odksQBWY67Ae8K4+CCIitFglUx3CZB+TasRWhUxDCIQLh35wEzWrLFNrGjYxycVFrgpLajo8VmmzBx4kO2hzIaMQuSYFVWNYKaR24Pb4VXBCR0+LcPOLtw4URogofhEbgIF+ACfXBVw8J59r0T4RgcgGvwIbwDr0bvrokKur2Do6ROZ4itWbhx+fLl1qhyY9eQV5dog8fgYbx8OVjhaf644fff/5MkCWt9FLN5y4xEjRCuDmEs2bU1NdWZYayJHhj2oHse+Fqm1acaEaghFcBiRhhjAiGEEc1oEUKIUJk5sUFuaGioZBtEriZClmXZztMSvPj4F5IkkJL0xeMv8hJwzbzG5k/
+ZfODAgc1T8sNHW1tbR8PzJ2/
+fvn1yflhfX18YrOB5MhgEkhBMBAnBIEgSDT6WZX1AS02RQBGmEC1VKrRg2q3WctyaUqpF/
+PYXUbTzBELKmID9kiea+1hCGvXzf57w9LIFDoeD233gyJGFC1c5HI4FnZ0DQ71t//77b3vfKE3BZp54cdinCFol4A2Y8mZtcTqdR8fBSTgH5wRtaFJ8qN6M+6XOr15sAly8sZqQujmOffv27d21batjmxMM/
+OapT9hYZxns6ekdHB4dHR30aDQMdo8Od3fLHkajcfVnwFq+URX0j3S1dI0qvJqkggN/
+fPzh95JAjQUDQYQEvUKqQKX0Sx0/
+vfgiUERTIwI1xAIY9IAIJDs8xgzW/7QS2rwifeXKzZtXfrHypxo4J6j+kmUZMc3NQgCa2EtIXGLKmck59+7du2lWhvv33//4x9Xe0d7WNez1jq2Z9RaW8yGP3t0mtfz4SfMn73/4VYdg8HT/0fz2C/
+ddOn8RGMWakPDqYmxwP9wfcWDD1sMwLWtq85L1CiBL5YIVO5x7Heu37B8Hx+AUCLpDnL3QPNzZ0R7M3Qm7eD5ODuqjw/
+SWONXPSIsxXEdozAlFhUVFhbkpETpSQTyN2OwpC8dHkeACFv7p2kZ1Tk6yGfV3zZwxbcrkafZ1Ikzitad0fUBrVITCU77+zs4B7/
+F040snxbS2+iLTSuYPWmWvqCpOizAa9NFJBXV1dbZ5dx21nd0vLm3fvn0risIimKH//
+vl7JDSvIKakpKq6JidWp2IYJiyOHVOTI60wn0/8tTuAQAkGlAAdlRZO0Xr1aFdPL22JyMxNjNCHmCO1TbHDba7uMZOJ6nMpulCzJZI1+cXfPnr2qdc+fPuVV5qboBGBGpYDQNIvP3t0tCzLxtIJs9bv2rljZVVsKPIFVDpVYEgaGAlE27aMg3Ob8Sd3T0Swi89QlBB6pHNgqNvlcrX29LcPBWXpv2+
++/
+e6bb777rX2oT1YURf7ltSfe74gapoIEmMwfv4XjmtYlm2RZNiWX2e32MpjMawcuySY5k7G+HoqMjycgkQcN7wHd+QpMbRK+v/97bTZO+Kqj1PvXtOdt04HNqcy36DCN/
+zH/lrXj1VPNyULWbWjdqsiapf9j/i5ox1d43gRb8YUwefX/m/
+ImQaaSoJxIEGUkyA0S1CnGKpdA8Uac7MNCVpAsakiQviSI7yTIbHzEB2EyhBTxDXfpQ5wMIYpzAjknUOyizS8OnwhbdrHgDCt6pmpaJmMuxtYaumOXA1F3vUtgIIp2SYxEyi5FmDDapYEDH7s0seN5lxYOXO40IoqlQ4TEgLlkCi+a0ECHMdiliR49u7TwIo1r41LLA9DrjHoG6fQyxBydDFDGMIO0MkQgaQyoi22n36kfHqevY6Eto5NuJjGSj2HJIfpqo+8d8x4mdidPMMI4cQSPahqnnTF6GWGCcYKgpF4GCGKYMbrNzcVkUUAaK1VQFZ2MhWiHGcKFsBoibGIEHM7lAo8vPZ4iiikik3iKWG7F8NKmM8wIsxKoQGDAQnZFc6GCHjpxYVJWCWMM00cn7b48lcnIgORbj+OCT5R4N71O7SRtBNEe+5KCKSKDXMpJ1w+vIpMygkmYb74KU9v/
+e3XM2BsA) format('woff2');
+}
+</style>
+	<svg x="0" y="0" width="800" height="400" viewBox="0 0 800 400" overflow="hidden" class="bi-HA44aRZEoQ-countdown">
+		<style type="text/css">
+.bi-HA44aRZEoQ-countdown-cd {
+	animation-timing-function: steps(1);
+	animation-iteration-count: infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+	.bi-HA44aRZEoQ-countdown-cd {
+		animation-timing-function: steps(1);
+	}
+}
+.bi-HA44aRZEoQ-countdown text {
+	user-select: none; 
+	pointer-events: none;
+	text-anchor: middle;
+	text-rendering: geometricPrecision;
+}
+.bi-HA44aRZEoQ-countdown-digits text {
+	font-size: 127px;
+	font-family: 'Cinzel-18ab2cca304c55a42fdf952e1f01d7cf';
+	font-weight: 400.0;
+	font-style: normal;
+	fill: #e1ba6c;
+}
+.bi-HA44aRZEoQ-countdown-labels text {
+	font-size: 36px;
+	font-family: 'Cinzel-18ab2cca304c55a42fdf952e1f01d7cf';
+	font-weight: 400.0;
+	font-style: normal;
+	fill: #e1ba6c;
+}
+@keyframes bi-a10 {
+  0% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(-171px);
+  }
+  20% {
+    transform: translateY(-342px);
+  }
+  30% {
+    transform: translateY(-513px);
+  }
+  40% {
+    transform: translateY(-684px);
+  }
+  50% {
+    transform: translateY(-855px);
+  }
+  60% {
+    transform: translateY(-1026px);
+  }
+  70% {
+    transform: translateY(-1197px);
+  }
+  80% {
+    transform: translateY(-1368px);
+  }
+  90% {
+    transform: translateY(-1539px);
+  }
+  100% {
+    transform: translateY(-1710px);
+  }
+}
+@keyframes bi-a60 {
+  0%,15% {
+    transform: translateY(0px);
+  }
+  16.67%,31.67% {
+    transform: translateY(-171px);
+  }
+  33.33%,48.33% {
+    transform: translateY(-342px);
+  }
+  50%,65% {
+    transform: translateY(-513px);
+  }
+  66.67%,81.67% {
+    transform: translateY(-684px);
+  }
+  83.33%,98.33% {
+    transform: translateY(-855px);
+  }
+  100% {
+  	transform: translateY(-1026px);
+  }
+}
+@keyframes bi-a600 {
+  0%,9.833% {
+    transform: translateY(0px);
+  }
+  10%,19.833% {
+    transform: translateY(-171px);
+  }
+  20%,29.833% {
+    transform: translateY(-342px);
+  }
+  30%,39.833% {
+    transform: translateY(-513px);
+  }
+  40%,49.833% {
+    transform: translateY(-684px);
+  }
+  50%,59.833% {
+    transform: translateY(-855px);
+  }
+  60%,69.833% {
+    transform: translateY(-1026px);
+  }
+  70%,79.833% {
+    transform: translateY(-1197px);
+  }
+  80%,89.833% {
+    transform: translateY(-1368px);
+  }
+  90%,99.833% {
+    transform: translateY(-1539px);
+  }
+  100% {
+    transform: translateY(-1710px);
+  }
+}
+@keyframes bi-a3600 {
+  0%,16.639% {
+    transform: translateY(0px);
+  }
+  16.67%,33.306% {
+    transform: translateY(-171px);
+  }
+  33.33%,49.972% {
+    transform: translateY(-342px);
+  }
+  50%,66.639% {
+    transform: translateY(-513px);
+  }
+  66.67%,83.306% {
+    transform: translateY(-684px);
+  }
+  83.33%,99.972% {
+    transform: translateY(-855px);
+  }
+  100% {
+  	transform: translateY(-1026px);
+  }
+}
+</style>
+		<defs><filter id="bi-HA44aRZEoQ-cdfx" x="-50%" y="-100%" width="200%" height="300%">
+	<feDropShadow dx="-5" dy="-5" stdDeviation="2.0" flood-color="#000000" flood-opacity="0.5"></feDropShadow>
+</filter></defs>
+		<defs><filter id="bi-HA44aRZEoQ-clfx" x="-50%" y="-100%" width="200%" height="300%">
+	<feDropShadow dx="-2" dy="-2" stdDeviation="2.0" flood-color="#231f20" flood-opacity="0.5"></feDropShadow>
+</filter></defs>
+			<g class="bi-HA44aRZEoQ-countdown-labels">
+					<text x="127" y="284" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-clfx)">TAGE</text>			
+					<text x="345" y="284" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-clfx)">STD.</text>			
+					<text x="527" y="284" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-clfx)">MIN.</text>			
+					<text x="709" y="284" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-clfx)">SEK.</text>			
+			</g>
+			<svg x="0" y="114" width="800" height="171" viewBox="0 0 800 171" overflow="hidden" class="bi-HA44aRZEoQ-countdown-digits">
+					<text class="bi-HA44aRZEoQ-countdown-digit" data-digit="d3" x="54" y="85.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">3</text>
+					<text class="bi-HA44aRZEoQ-countdown-digit" data-digit="d2" x="127" y="85.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">3</text>
+					<text class="bi-HA44aRZEoQ-countdown-digit" data-digit="d1" x="200" y="85.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">5</text>
+				<text x="254" y="85.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">:</text>	
+					<text class="bi-HA44aRZEoQ-countdown-digit" data-digit="h2" x="309" y="85.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">1</text>
+					<text class="bi-HA44aRZEoQ-countdown-digit" data-digit="h1" x="381" y="85.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">0</text>
+				<text x="436" y="85.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">:</text>	
+				<g class="bi-HA44aRZEoQ-countdown-cd" style="animation-name: bi-a3600; animation-duration: 3600s; animation-delay: -438.53s;">
+						<text x="490" y="85.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">5</text>
+						<text x="490" y="256.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">4</text>
+						<text x="490" y="427.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">3</text>
+						<text x="490" y="598.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">2</text>
+						<text x="490" y="769.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">1</text>
+						<text x="490" y="940.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">0</text>
+						<text x="490" y="1111.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">5</text>
+				</g>
+				<g class="bi-HA44aRZEoQ-countdown-cd" style="animation-name: bi-a600; animation-duration: 600s; animation-delay: -438.53s;">
+						<text x="563" y="85.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">9</text>
+						<text x="563" y="256.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">8</text>
+						<text x="563" y="427.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">7</text>
+						<text x="563" y="598.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">6</text>
+						<text x="563" y="769.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">5</text>
+						<text x="563" y="940.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">4</text>
+						<text x="563" y="1111.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">3</text>
+						<text x="563" y="1282.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">2</text>
+						<text x="563" y="1453.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">1</text>
+						<text x="563" y="1624.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">0</text>
+						<text x="563" y="1795.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">9</text>
+				</g>
+				<text x="618" y="85.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">:</text>	
+				<g class="bi-HA44aRZEoQ-countdown-cd" style="animation-name: bi-a60; animation-duration: 60s; animation-delay: -18.53s;">
+						<text x="672" y="85.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">5</text>
+						<text x="672" y="256.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">4</text>
+						<text x="672" y="427.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">3</text>
+						<text x="672" y="598.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">2</text>
+						<text x="672" y="769.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">1</text>
+						<text x="672" y="940.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">0</text>
+						<text x="672" y="1111.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">5</text>
+				</g>
+				<g class="bi-HA44aRZEoQ-countdown-cd" style="animation-name: bi-a10; animation-duration: 10s; animation-delay: -8.53s;">
+						<text x="745" y="85.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">9</text>
+						<text x="745" y="256.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">8</text>
+						<text x="745" y="427.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">7</text>
+						<text x="745" y="598.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">6</text>
+						<text x="745" y="769.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">5</text>
+						<text x="745" y="940.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">4</text>
+						<text x="745" y="1111.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">3</text>
+						<text x="745" y="1282.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">2</text>
+						<text x="745" y="1453.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">1</text>
+						<text x="745" y="1624.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">0</text>
+						<text x="745" y="1795.5" dominant-baseline="central" filter="url(#bi-HA44aRZEoQ-cdfx)">9</text>
+				</g>
+			</svg>
+	</svg>
+
+</svg><style class="bi-HA44aRZEoQ-style">
+.bi-HA44aRZEoQ-kebab {
+	font-size: 18px;
+	line-height: 18px;
+	position: absolute; 
+	color: white; 
+	font-weight: 900;
+	text-shadow: rgb(85, 85, 85) 1px 1px 0px;
+	cursor: pointer;
+	opacity: 0;
+	transition: opacity 0.3s ease; 
+}
+svg:hover ~ .bi-HA44aRZEoQ-kebab, .bi-HA44aRZEoQ-kebab:hover {
+	opacity: 1; 
+}
+.bi-HA44aRZEoQ-menu {
+	min-width: 150px;
+	opacity: 0.97;
+	position: fixed;
+	background-color: rgb(225, 224, 223);
+	border: 1px solid #cccccc;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	border-radius: 7px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	padding: 5px;
+	display: none;
+	z-index: 2147483647;
+}
+.bi-HA44aRZEoQ-menu ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	text-align: start;
+}
+.bi-HA44aRZEoQ-menu li {
+	line-height: 20px;
+	font-size: 13px;
+	text-wrap: nowrap;
+	padding: 2px 7px;
+	cursor: default;
+	color: #262626;
+}
+.bi-HA44aRZEoQ-menu li:hover {
+	background-color: rgb(106, 160, 248);
+	color: #ffffff; 
+	border-radius: 5px;
+}
+.bi-HA44aRZEoQ-menu .bi-menu-hr {
+	height: 1px;
+	background-color: #cccccc;
+	margin: 5px 7px;
+	padding: 0;
+	pointer-events: none;
+}
+.bi-HA44aRZEoQ-menu a {
+	color: inherit; 
+	cursor: default;
+	text-decoration: none;
+	display: inline-block;
+	width: 100%; 
+}	
+</style><div class="bi-HA44aRZEoQ-menu"><ul><li><a href="https://dzaj6n48504sd.betterimages.ai/i:4F9ZzS9PUi/v:HA44aRZEoQ/embed" target="_blank">Open Image in New Tab</a></li><li>Reload</li><li class="bi-menu-hr"></li><li><a href="https://betterimages.ai/" target="_blank">Better Images</a></li></ul></div>
+</body></html>

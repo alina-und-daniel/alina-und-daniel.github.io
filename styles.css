@@ -1,0 +1,220 @@
+:root {
+  --navbar-height: 48px;
+  --page-width: 1280;
+  --page-height: 720;
+  --page-width-scale: calc(var(--view-width) / var(--page-width));
+  --page-width-scale-vertical: calc(var(--view-width) / var(--page-height));
+}
+
+.pages {
+  width: 100%;
+  height: 100%;
+  overflow: hidden scroll;
+  position: relative;
+}
+
+.border-decoration-container {
+  @media (min-aspect-ratio: 1/1) {
+    transform-origin: top left;
+    transform:
+      translate(50vw, 0)
+      scale(var(--page-width-scale))
+      translate(-50vw, 0)
+      translate(
+        calc((100vw - var(--page-width) * 1px) / 2),
+        0
+      ); 
+  }
+  /* vertical */
+  @media (max-aspect-ratio: 1/1) {
+    transform-origin: top left;
+    transform:
+      rotate(90deg)
+      scaleY(-1)
+      translate(0, 50vw)
+      scale(calc(var(--page-width-scale-vertical)))
+      translate(0, -50vw)
+      translate(
+        -0px,
+        calc((100vw - var(--page-height) * 1px) / 2))
+      ;
+  }
+}
+
+.border-decoration {
+  --scale-factor: 1px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: calc(var(--width) * var(--scale-factor));
+  height: calc(var(--height) * var(--scale-factor));
+  transform:
+    translate(
+      calc(var(--tr-x) * 1px),
+      calc(var(--tr-y) * 1px))
+    rotate(var(--rot, 0))
+    scale(var(--scale-x, 1), var(--scale-y, 1));
+}
+
+#hauptseite {
+  width: 100vw;
+  @media (min-aspect-ratio: 1/1) {
+    height: calc(1px * var(--page-height) * var(--page-width-scale));
+    font-size: calc(66px * var(--page-width-scale));
+  }
+  /* vertical */
+  @media (max-aspect-ratio: 1/1) {
+    height: calc(1px * var(--page-width) * var(--page-width-scale-vertical));
+    font-size: calc(66px * var(--page-width-scale-vertical));
+  }
+  font-family: "Cinzel";
+  background-color: rgb(246, 242, 231);
+
+  > .border-decoration-container {
+    > :nth-child(1) {
+      --width: 254.036;
+      --height: 287.859;
+      --tr-x: 43.3195;
+      --tr-y: -89.6407;
+      --rot: 50.417deg;
+    }
+
+    > :nth-child(2) {
+      --width: 347.504;
+      --height: 380.565;
+      --tr-x: 340.811;
+      --tr-y: -261.857;
+    }
+
+    > :nth-child(3) {
+      --width: 512;
+      --height: 184.64;
+      --tr-x: 556.312;
+      --tr-y: -75.1898;
+      --rot: -180deg;
+    }
+
+    > :nth-child(4) {
+      --width: 254.036;
+      --height: 287.859;
+      --tr-x: 1081.02;
+      --tr-y: -105.804;
+      --rot: -154.413deg;
+    }
+
+    > :nth-child(5) {
+      --width: 313.951;
+      --height: 320.358;
+      --tr-x: 1008.83;
+      --tr-y: 62.6176;
+      --rot: -129deg;
+    }
+
+    > :nth-child(6) {
+      --width: 512;
+      --height: 203.52;
+      --tr-x: 870.955;
+      --tr-y: 395.372;
+      --rot: -160.115deg;
+    }
+
+    > :nth-child(7) {
+      --width: 347.504;
+      --height: 380.565;
+      --tr-x: 1084.8408;
+      --tr-y: 570.3942;
+      --rot: -90deg;
+    }
+
+    > :nth-child(8) {
+      --width: 347.504;
+      --height: 380.565;
+      --tr-x: 714.785;
+      --tr-y: 570.394;
+      --rot: 178.159deg;
+      --scale-x: 1;
+      --scale-y: -1;
+    }
+
+    > :nth-child(9) {
+      --width: 316.9;
+      --height: 347.049;
+      --tr-x: 501.939;
+      --tr-y: 655.683;
+      --rot: 24.5027deg;
+    }
+
+    > :nth-child(10) {
+      --width: 254.036;
+      --height: 287.859;
+      --tr-x: 270.232;
+      --tr-y: 517.071;
+      --rot: 85.0221deg;
+    }
+
+    > :nth-child(11) {
+      --width: 313.951;
+      --height: 320.358;
+      --tr-x: 205.224;
+      --tr-y: 544.223;
+      --rot: -124.045deg;
+    }
+
+    > :nth-child(12) {
+      --width: 347.504;
+      --height: 380.565;
+      --tr-x: -45.6928;
+      --tr-y: 387.804;
+    }
+
+    > :nth-child(13) {
+      --width: 347.504;
+      --height: 380.565;
+      --tr-x: -308.432;
+      --tr-y: 184.129;
+      --rot: 35.3049deg;
+    }
+
+    > :nth-child(14) {
+      --width: 512;
+      --height: 184.64;
+      --tr-x: -284.622;
+      --tr-y: 68.6169;
+      --rot: -164.204deg;
+    }
+  }
+
+  > :nth-child(2) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .mail {
+    font-family: "Montserrat";
+    text-decoration: underline;
+    color: black;
+    border: 1px solid;
+    @media (min-aspect-ratio: 1/1) {
+      font-size: calc(15pt * var(--page-width-scale));
+      padding-left: calc(40px * var(--page-width-scale));
+      padding-right: calc(40px * var(--page-width-scale));
+      padding-top: calc(10px * var(--page-width-scale));
+      padding-bottom: calc(10px * var(--page-width-scale));
+      border-radius: calc(50vh * var(--page-width-scale));
+    }
+
+    /* vertical */
+    @media (max-aspect-ratio: 1/1) {
+      font-size: calc(15pt * var(--page-width-scale-vertical));
+      padding-left: calc(40px * var(--page-width-scale-vertical));
+      padding-right: calc(40px * var(--page-width-scale-vertical));
+      padding-top: calc(10px * var(--page-width-scale-vertical));
+      padding-bottom: calc(10px * var(--page-width-scale-vertical));
+      border-radius: calc(50vh * var(--page-width-scale-vertical));
+    }
+  }
+}
