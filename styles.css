@@ -4,56 +4,51 @@
   --page-height: 720;
   --page-width-scale: calc(var(--view-width) / var(--page-width));
   --page-width-scale-vertical: calc(var(--view-width) / var(--page-height));
+  --background-color1: rgb(246, 242, 231);
+  --background-color2: rgb(248, 232, 210);
+  --font-caption1: "Cinzel";
+  --font-text1: "Montserrat, sans-serif";
+}
+
+body {
+  margin: 0;
+  text-align: center;
+}
+a[href] {
+  text-decoration: underline;
+  color: black;
+}
+
+#navbar {
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  height: var(--navbar-height);
+  justify-content: flex-end;
+  background-color: var(--background-color1);
+  > ul {
+    display: flex;
+    > li {
+      color: rgb(48, 66, 84);
+      overflow: hidden;
+      padding: 12px 16px;
+      > a {
+        /* font-family: "Montserrat, sans-serif"; */
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .pages {
   width: 100%;
   height: 100%;
-  overflow: hidden scroll;
+  overflow: hidden;
   position: relative;
-}
-
-.border-decoration-container {
-  @media (min-aspect-ratio: 1/1) {
-    transform-origin: top left;
-    transform:
-      translate(50vw, 0)
-      scale(var(--page-width-scale))
-      translate(-50vw, 0)
-      translate(
-        calc((100vw - var(--page-width) * 1px) / 2),
-        0
-      ); 
+  > section {
+    overflow: hidden;
   }
-  /* vertical */
-  @media (max-aspect-ratio: 1/1) {
-    transform-origin: top left;
-    transform:
-      rotate(90deg)
-      scaleY(-1)
-      translate(0, 50vw)
-      scale(calc(var(--page-width-scale-vertical)))
-      translate(0, -50vw)
-      translate(
-        -0px,
-        calc((100vw - var(--page-height) * 1px) / 2))
-      ;
-  }
-}
-
-.border-decoration {
-  --scale-factor: 1px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: calc(var(--width) * var(--scale-factor));
-  height: calc(var(--height) * var(--scale-factor));
-  transform:
-    translate(
-      calc(var(--tr-x) * 1px),
-      calc(var(--tr-y) * 1px))
-    rotate(var(--rot, 0))
-    scale(var(--scale-x, 1), var(--scale-y, 1));
 }
 
 #hauptseite {
@@ -67,8 +62,8 @@
     height: calc(1px * var(--page-width) * var(--page-width-scale-vertical));
     font-size: calc(66px * var(--page-width-scale-vertical));
   }
-  font-family: "Cinzel";
-  background-color: rgb(246, 242, 231);
+  font-family: var(--font-caption1);
+  background-color: var(--background-color1);
 
   > .border-decoration-container {
     > :nth-child(1) {
@@ -189,14 +184,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
     z-index: 1;
   }
 
-  .mail {
-    font-family: "Montserrat";
-    text-decoration: underline;
-    color: black;
+  a[href] {
+    /* font-family: "Montserrat"; */
     border: 1px solid;
     @media (min-aspect-ratio: 1/1) {
       font-size: calc(15pt * var(--page-width-scale));
@@ -215,6 +207,339 @@
       padding-top: calc(10px * var(--page-width-scale-vertical));
       padding-bottom: calc(10px * var(--page-width-scale-vertical));
       border-radius: calc(50vh * var(--page-width-scale-vertical));
+    }
+  }
+
+
+  .border-decoration-container {
+    @media (min-aspect-ratio: 1/1) {
+      transform-origin: top left;
+      transform:
+        translate(50vw, 0)
+        scale(var(--page-width-scale))
+        translate(-50vw, 0)
+        translate(
+          calc((100vw - var(--page-width) * 1px) / 2),
+          0
+        ); 
+    }
+    /* vertical */
+    @media (max-aspect-ratio: 1/1) {
+      transform-origin: top left;
+      transform:
+        rotate(90deg)
+        scaleY(-1)
+        translate(0, 50vw)
+        scale(calc(var(--page-width-scale-vertical)))
+        translate(0, -50vw)
+        translate(
+          -0px,
+          calc((100vw - var(--page-height) * 1px) / 2))
+        ;
+    }
+  }
+
+  .border-decoration {
+    --scale-factor: 1px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: calc(var(--width) * var(--scale-factor));
+    height: calc(var(--height) * var(--scale-factor));
+    transform:
+      translate(
+        calc(var(--tr-x) * 1px),
+        calc(var(--tr-y) * 1px))
+      rotate(var(--rot, 0))
+      scale(var(--scale-x, 1), var(--scale-y, 1));
+  }
+}
+
+#geschichte {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: var(--background-color2);
+  height: 100%;
+  > div {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  > div:nth-child(1) {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    * {
+      grid-area: 1 / 1;
+    }
+    > div:nth-child(1).imageborder {
+      padding: 20px;
+      background-color: white;
+      > img {
+        width: 370px;
+      }
+    }
+    > img:nth-child(2) {
+      width: 200px;
+      transform:
+        translate(-80px, 180px)
+        rotate(-60deg);
+    }
+  }
+  > div:nth-child(2) {
+    width: max(500px, 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    > div:first-child.title {
+      font-size: 53px;
+      font-family: var(--font-caption1);
+    }
+    > div:not(:first-child) {
+      font-size: 18px;
+      font-family: var(--font-text1);
+      font-weight: 400;
+    }
+  }
+}
+
+#zeremoniefeier {
+  background-color: var(--background-color1);
+  > div:nth-child(1) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 53px;
+    font-family: var(--font-caption1);
+  }
+  > div:nth-child(2) {
+    > img {
+      width: 40%;
+    }
+    > img:nth-child(1) {
+      transform: scaleX(-1);
+    }
+  }
+  > div:nth-child(3) {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    font-family: var(--font-text1);
+    font-size: 35px;
+    font-weight: 300;
+  }
+  > div:nth-child(4) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: var(--font-text1);
+    font-size: 22px;
+    font-weight: 200;
+  }
+  > div:nth-child(5) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: var(--font-text1);
+    font-size: 20px;
+    font-weight: 200;
+  }
+}
+
+#einladung {
+  background-image: url('assets/img/545ae3279668e556059d53f79c2f7ec2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  > div {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color1);
+    width: fit-content;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    > div:nth-child(1) {
+      padding-bottom: 10px;
+      font-family: var(--font-caption1);
+      font-size: 40px;
+    }
+    > div:nth-child(2) {
+      padding-bottom: 30px;
+      font-family: var(--font-text1);
+      font-weight: 200;
+      font-size: 20px;
+    }
+    > div:nth-child(3) {
+      padding-bottom: 10px;
+      font-family: var(--font-caption1);
+      font-size: 35px;
+    }
+    > div:nth-child(4) {
+      font-family: var(--font-text1);
+      font-size: 13px;
+      font-weight: 200;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+#faq {
+  background-color: var(--background-color1);
+  position: relative;
+  .imageborder {
+    img {
+      --image-size: 25vw;
+      position: absolute;
+      width: var(--image-size);
+      height: var(--image-size);
+    }
+    img:nth-child(1) {
+      left: 0;
+      transform:
+        scale(-1);
+    }
+    img:nth-child(2) {
+      right: 0;
+      transform:
+        scaleY(-1);
+    }
+    img:nth-child(3) {
+      right: 0;
+      bottom: 0;
+    }
+    img:nth-child(4) {
+      left: 0;
+      bottom: 0;
+      transform:
+        scaleX(-1);
+    }
+  }
+  > div:nth-child(2) {
+    > div:nth-child(1) {
+      font-family: var(--font-caption1);
+      font-size: 50px;
+    }
+
+    @media (max-aspect-ratio: 1/1) {
+      padding: 80px;
+      > div:nth-child(1) {
+        width: 100%;
+      }
+    }
+    @media (min-aspect-ratio: 1/1) {
+      display: flex;
+      flex-direction: row;
+      > div {
+        width: 50%;
+      }
+      > div:nth-child(1) {
+        display: grid;
+        place-items: center;
+      }
+      > div:nth-child(2) {
+        width: 5px;
+        border-left: 2px solid black;
+        margin: 40px;
+      }
+      > div:nth-child(3) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        padding-right: 100px;
+      }
+    }
+    > div:nth-child(3) {
+      > div {
+        padding: 10px;
+      }
+      > div:nth-child(odd) {
+        font-family: var(--font-caption1);
+        font-size: 20px;
+        font-weight: 200;
+      }
+      > div:nth-child(even) {
+        font-family: var(--font-text1);
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+#antwort {
+  background-color: var(--background-color2);
+  position: relative;
+  .imageborder {
+    img {
+      position: absolute;
+      width: 20vw;
+    }
+    img:nth-child(1) {
+      left: 0;
+      transform:
+        translateY(calc((100vh - 850px) / 2))
+        translateX(-50px)
+        rotateZ(45deg);
+    }
+    img:nth-child(2) {
+      right: 0;
+      transform:
+        translateY(calc((100vh - 850px) / 2))
+        translateX(50px)
+        scaleX(-1)
+        rotateZ(45deg);
+    }
+  }
+  div:nth-child(2) {
+    padding: 50px;
+    > div:nth-child(1) {
+      font-family: var(--font-caption1);
+      font-size: 35px
+    }
+    > div:nth-child(2) {
+      font-family: var(--font-text1);
+      font-size: 15px;
+      font-weight: 200;
+    }
+  }
+}
+
+#location {
+  background-color: var(--background-color1);
+  position: relative;
+  .imageborder {
+    img {
+      position: absolute;
+      width: 20vw;
+      right: 0;
+      bottom: 0;
+      transform:
+        scaleX(-1);
+    }
+  }
+  > div:nth-child(2) {
+    > div:nth-child(1) {
+      > div:nth-child(1) {
+        /* width: 40%; */
+        font-family: var(--font-caption1);
+        font-size: 50px;
+      }
+      > div:nth-child(2) {
+        /* maps stuff
+      }
+    }
+    > div:nth-child(2) {
+      > div:nth-child(1) {
+        font-family: var(--font-caption1);
+        font-size: 25px;
+      }
+      > div:nth-child(3) {
+        font-size: 20px;
+        font-weight: 200;
+      }
     }
   }
 }
