@@ -262,8 +262,7 @@ a[href] {
   background-color: var(--background-color2);
   height: 100%;
   > div {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px;
   }
   > div:nth-child(1) {
     display: grid;
@@ -353,6 +352,9 @@ a[href] {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   > div {
     display: flex;
     flex-direction: column;
@@ -360,8 +362,8 @@ a[href] {
     width: fit-content;
     padding-top: 30px;
     padding-bottom: 30px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
     > div:nth-child(1) {
       padding-bottom: 10px;
       font-family: var(--font-caption1);
@@ -508,6 +510,8 @@ a[href] {
 }
 
 #location {
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: var(--background-color1);
   position: relative;
   .imageborder {
@@ -520,15 +524,17 @@ a[href] {
         scaleX(-1);
     }
   }
+  details:last-child {
+    padding-bottom: 20px;
+  }
+  summary {
+    padding: 5px;
+  }
   > div:nth-child(2) {
     > div:nth-child(1) {
       > div:nth-child(1) {
-        /* width: 40%; */
         font-family: var(--font-caption1);
         font-size: 50px;
-      }
-      > div:nth-child(2) {
-        /* maps stuff
       }
     }
     > div:nth-child(2) {
