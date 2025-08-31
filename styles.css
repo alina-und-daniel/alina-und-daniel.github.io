@@ -262,9 +262,11 @@ a[href] {
   background-color: var(--background-color2);
   height: 100%;
   > div {
-    padding: 50px;
+    padding: 10px;
   }
   > div:nth-child(1) {
+    padding-top: 50px;
+    padding-bottom: 80px;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -277,14 +279,23 @@ a[href] {
       padding: 20px;
       background-color: white;
       > img {
-        width: 370px;
+        width: min(370px, 60vw);
       }
     }
     > img:nth-child(2) {
       width: 200px;
+      border: 1px red solid;
       transform:
         translate(-80px, 180px)
-        rotate(-60deg);
+        rotate(-60deg)
+        ;
+      @media (width < 600px) {
+        transform:
+          translate(calc(var(--view-width) / 600 * (-80px)), 180px)
+          rotate(-60deg)
+          scale(calc(var(--view-width) / 600))
+          ;
+      }
     }
   }
   > div:nth-child(2) {
@@ -486,30 +497,10 @@ a[href] {
 #antwort {
   background-color: var(--background-color2);
   position: relative;
-  .imageborder {
-    img {
-      position: absolute;
-      width: 20vw;
-    }
-    img:nth-child(1) {
-      left: 0;
-      transform:
-        translateY(calc((100vh - 850px) / 2))
-        translateX(-50px)
-        rotateZ(45deg);
-    }
-    img:nth-child(2) {
-      right: 0;
-      transform:
-        translateY(calc((100vh - 850px) / 2))
-        translateX(50px)
-        scaleX(-1)
-        rotateZ(45deg);
-    }
-  }
-  div:nth-child(2) {
+  > div:nth-child(1) {
     padding: 50px;
     > div:nth-child(1) {
+      padding-bottom: 20px;
       font-family: var(--font-caption1);
       font-size: 35px
     }
