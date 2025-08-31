@@ -284,7 +284,6 @@ a[href] {
     }
     > img:nth-child(2) {
       width: 200px;
-      border: 1px red solid;
       transform:
         translate(-80px, 180px)
         rotate(-60deg)
